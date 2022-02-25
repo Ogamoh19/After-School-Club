@@ -39,6 +39,8 @@
     <p class="card-text">Location: {{subject.location}}</p>
     <p class="card-text">Price: {{subject.price}}</p>
     <p class="card-text">Number of Spaces : {{subject.numberofspaces}}</p>
+     <button v-on:click='addToCart'  class="btn btn-primary">Add to Cart</a>
+    <button disabled="disable"  class="btn btn-primary" v-else>Add to cart</button>
     </div>
     </div>
     </div>
@@ -58,7 +60,18 @@
     location:"China",
     price:"$200",
     numberofspaces: 10
-    }
+    },
+        cart: [],
+                showsubject: true,
+            },
+                methods: {
+                
+                addToCart() {
+                this.cart.push(this.subject.id);
+                this.subject.numberofspaces=  this.subject.numberofspaces-this.canAddToCart
+               
+                }
+                }
     }
   })
     </script>
