@@ -7,3 +7,4 @@
 - English
 - Geography
 > Lessons can be added by clicking on the add to cart button
+> The number of space is reduced by an eventlistener called V-on and the code can be accessed online using GITHUB pages
